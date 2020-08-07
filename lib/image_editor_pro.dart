@@ -17,6 +17,10 @@ import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:signature/signature.dart';
 
+import 'package:charlesmemeeditor/globals.dart' as globals;
+
+
+
 TextEditingController heightcontroler = TextEditingController();
 TextEditingController widthcontroler = TextEditingController();
 var width = 300;
@@ -103,7 +107,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
         appBar: new AppBar(
           actions: <Widget>[
             new IconButton(
-                icon: Icon(FontAwesomeIcons.boxes),
+                icon: Icon(Icons.aspect_ratio),
                 onPressed: () {
                   showCupertinoDialog(
                       context: context,
@@ -169,22 +173,21 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                   _controller.points.clear();
                   setState(() {});
                 }),
-            new IconButton(
-                icon: Icon(Icons.camera),
-                onPressed: () {
-                  bottomsheets();
-                }),
+//            new IconButton(
+//                icon: Icon(Icons.camera),
+//                onPressed: () {
+//                  bottomsheets();
+//                }),
             new FlatButton(
                 child: new Text("Done"),
                 textColor: Colors.white,
                 onPressed: () {
                   File _imageFile;
-                  _imageFile = null;
+                  _imageFile = globals.image;
                   screenshotController
                       .capture(
                           delay: Duration(milliseconds: 500), pixelRatio: 1.5)
                       .then((File image) async {
-                    //print("Capture Done");
                     setState(() {
                       _imageFile = image;
                     });

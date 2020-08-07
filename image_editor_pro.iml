@@ -12,8 +12,14 @@
       <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../charles_meme_editor">
+      <excludeFolder url="file://$MODULE_DIR$/../charles_meme_editor/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../charles_meme_editor/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../charles_meme_editor/build" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
     <orderEntry type="library" name="Flutter Plugins" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>

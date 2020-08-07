@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_editor_pro/image_editor_pro.dart';
+import 'package:charlesmemeeditor/globals.dart' as ;
+
 
 void main() => runApp(MyApp());
 
@@ -41,6 +43,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   File _image;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
